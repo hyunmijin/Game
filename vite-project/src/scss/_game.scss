@@ -55,13 +55,16 @@ header h1 {
     text-align: center; 
 }
 .icon__box > div img {
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
+    width: 250%;
+    border-radius: 4px 4px 0 0;
 }
 .icon__box > div span { 
-    background-color: #02200e9a;
+    background-color: #02200e58;
     display: inline-block;
     padding: 5px 2px 3px;
-    border-radius: 4px;
+    border-radius: 0 0 4px 4px;
+    width: 125px;
 }
 
 /* footer */
