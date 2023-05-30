@@ -11,14 +11,13 @@ function start(){
             },
             stop: function () {
                 $(".info").html("드래그가 멈췄습니다.");
-                settime(); 
             }
         });
         $(".icon2").draggable({
             containment: ".icon__box", scroll: false,
 
             start: function () {
-                $(".cursor img").attr("src", "images/game_mouse02.png");
+                $(".cursor img").attr("src", "images/game_mouse01.png");
                 $("#header").css("background-color", "#5100ff7e");
             },
             drag: function () {
@@ -32,7 +31,7 @@ function start(){
             containment: ".icon__box", scroll: false,
 
             start: function () {
-                $(".cursor img").attr("src", "images/game_mouse03.png");
+                $(".cursor img").attr("src", "images/game_mouse01.png");
                 $("#header").css("background-color", "#04ff007e");
             },
             drag: function () {
@@ -46,7 +45,7 @@ function start(){
             containment: ".icon__box", scroll: false,
 
             start: function () {
-                $(".cursor img").attr("src", "images/game_mouse04.png");
+                $(".cursor img").attr("src", "images/game_mouse01.png");
                 $("#header").css("background-color", "#eeff007e");
             },
             drag: function () {
