@@ -1,8 +1,8 @@
 function music() {
         const allMusic = [
                 {
-                        name: "1. Who Do You Think I Think You Are",
-                        artist: "Mini Vandals",
+                        name: "1. Lemon",
+                        artist: "Kenshi Yonezu",
                         img: "music_view01",
                         audio: "music_audio01",
                 },
