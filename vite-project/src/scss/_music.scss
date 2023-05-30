@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'SuseongDotum';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'IMHyemin';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'IMHyemin';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.ttf') format("truetype");
+    font-display: swap;
+} 
+
+/* nusic__wrap 
+    +music__inner
+        +music__header
+        +music__contents
+            +music__view
+        +music__footer
+*/
+body {
+    // background-image: url(https://i.pinimg.com/originals/e7/fc/a4/e7fca41687df365b3f4906a5942bb468.gif);
+    // background-image: url(https://64.media.tumblr.com/caf1e73991ad98d3b83748dad25e7af9/tumblr_pbwzgmaOi91sms57ko3_r1_540.gifv);
+    background-image: url(https://media.tenor.com/hzCxXrT8DLcAAAAC/ocean-water.gif);  //포뇨    
+    // background-image: url(    https://64.media.tumblr.com/def734ee138df82352f20d1e374c1239/tumblr_o82t0bizhl1sg9gi2o1_540.gifv);  //포뇨
+
+    // background-image: url(https://64.media.tumblr.com/881e28482fb70cd831a829a0a6a7bfae/tumblr_n8vmjiOYxW1tgifizo2_500.gifv); //토토로
+    // background-image: url(https://64.media.tumblr.com/7ef2e2c56658e90a7cf711e47ac578d3/tumblr_mty9yeoZwL1rll7syo1_500.gifv); //토토로
+    background-size: cover;
+}
+.music__inner {
+    width: 350px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    // transform: translate(-50%, -50%);
+    padding: 20px 22px;
+    border-radius: 20px;
+    box-shadow: 0 60px 100px rgba(0,0,0,0.4);
+}
+.music__header {
+}
+.music__header h2 {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 3px;
+    font-family: 'SuseongDotum';
+    font-weight: 200;
+}
+.music__header .left {}
+.music__header .right {}
+.music__contents {}
+.music__view {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 50px;
+    padding: 0 20px 20px 20px;
+    width: 90%;
+}
+.music__view .image {
+}
+.music__view .image img {
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(246, 50, 50, 0.4);
+}
+.music__control {
+    background-color: #fff;
+    height: 350px;
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 200px;
+    padding: 20px;
+}
+.music__control .title {
+    text-align: center;
+    padding-top: 120px;
+}
+.music__control .title h3 {
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 20px;
+    font-family: 'SuseongDotum';
+}
+.music__control .title p {
+    color: #666;
+    font-size: 16px;
+    font-family: 'SuseongDotum';
+    margin-bottom: 20px;
+}
+.music__control .progress {
+    background-color: #ccc;
+    height: 5px;
+    border-radius: 5px;
+}
+.music__control .progress .bar {
+    width: 0%;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #817bb9;
+}
+.music__control .progress .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+.music__control .progress .timer span {
+    color: #6258b8;
+    font-size: 12px;
+    pointer-events: none;
+}
+.music__control .control {
+    width: 100%;
+    /* height: 100px; */
+    margin-top: 40px;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.music__control .control span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+}
+.music__control .control span:active {
+    background-color: #e198eb2c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.music__control .control span i {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-image: url(../images/music_icon.svg);
+    background-size: 500px;
+}
+.music__control .control span i.repeat {
+    background-position: 0 0;
+}
+.music__control .control span i.prev {
+    background-position: -120px 0;
+}
+.music__control .control span:nth-child(3){
+    background-color: rgba(255, 0, 200, 0.226);
+    border-radius: 50%;
+}
+.music__control .control span i.play {
+    background-position: -160px 0px;
+}
+
+.music__control .control span i.next {
+    background-position: -240px 0;
+}
+.music__control .control span i.list {
+    background-position: -280px 0;
+}
+.music__control .control span i.repeat_one {
+    background-position: -40px 0;
+}
+.music__control .control span i.shuffle {
+    background-position: -80px 0;
+}
+.music__control .control span i.stop {
+    background-position: -200px 0px;
+}
+.music__list {
+    font-family: 'IMHyemin';
+    background-color: #cccccc17;
+    border-radius: 0 0 15px 15px;
+    padding: 20px 0;
+    display: none;
+}
+.music__list ul {
+    height: 190px;
+    overflow-y: scroll;
+}
+.music__list ul::-webkit-scrollbar {
+    width: 5px;
+}
+.music__list ul::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: #8a4fb993;
+    border-radius: 10px;
+}
+.music__list::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);
+}
+.music__list.show {
+    display: block;
+}
+.music__list h3 {
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 10px;
+    /* background-color: #ffffff11; */
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+}
+.music__list h3 .close {
+    position: absolute;
+    right: -10px;
+    top: 5px;
+    /* background-color: #fff; */
+    background-image: url(../images/music_icon.svg);
+    background-position: -320px 0;
+    width: 40px;
+    height: 40px;
+}
+.music__list ul li {
+    height: 50px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+    border-radius: 5px;
+    background-color: #cccccc15;
+    padding: 10px;
+}
+.music__list ul li.active {
+    background-color: #ffffff38;
+}
+.music__list ul li.playing {
+    background-color: #cccccc4b;
+}
+.music__list ul li .img {
+    width: 22%;
+}
+.music__list ul li .img img {
+    width: 50px;
+    border-radius: 5px;
+}
+.music__list ul li .title {
+    width: 70%;
+}

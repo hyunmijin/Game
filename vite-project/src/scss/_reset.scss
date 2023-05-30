@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'SuseongDotum';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/suseong/SuseongDotum.ttf') format("truetype");
+    font-display: swap;
+} 
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: #222;
+} 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+li, ul, ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
