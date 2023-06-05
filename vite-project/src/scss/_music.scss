@@ -32,7 +32,7 @@
     font-display: swap;
 } 
 
-/* nusic__wrap 
+/* music__wrap 
     +music__inner
         +music__header
         +music__contents
@@ -48,6 +48,9 @@ body {
     // background-image: url(https://64.media.tumblr.com/881e28482fb70cd831a829a0a6a7bfae/tumblr_n8vmjiOYxW1tgifizo2_500.gifv); //토토로
     // background-image: url(https://64.media.tumblr.com/7ef2e2c56658e90a7cf711e47ac578d3/tumblr_mty9yeoZwL1rll7syo1_500.gifv); //토토로
     background-size: cover;
+}
+.music__wrap {
+    display: none;
 }
 .music__inner {
     width: 350px;
@@ -77,7 +80,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    top: 50px;
+    top: 80px;
     padding: 0 20px 20px 20px;
     width: 90%;
 }
@@ -89,7 +92,7 @@ body {
 }
 .music__control {
     background-color: #fff;
-    height: 350px;
+    // height: 350px;
     border-radius: 15px 15px 15px 15px;
     margin-top: 200px;
     padding: 20px;

@@ -61,6 +61,8 @@ function music() {
                         audio: "music_audio10",
                 },
         ];
+        const musicBtn = document.querySelector(".icon1");
+        const musicClose = document.querySelector(".music_close");
         const musicWrap = document.querySelector(".music__wrap");
         const musicName = musicWrap.querySelector(".music__control .title h3");
         const musicArtist = musicWrap.querySelector(".music__control .title p");
@@ -87,6 +89,16 @@ function music() {
 
         let musicIndex = 1; //현재 음악 인덱스
 
+        // 뮤직 듣기 버튼 클릭
+        musicBtn.addEventListener("click", () => {
+                musicWrap.style.display = "block";
+        });
+
+        // 뮤직 닫기 버튼
+        musicClose.addEventListener("click", () => {
+                musicWrap.style.display = "none";
+                musicAudio.pause();
+        });
         //음악 재생
         const loadMusic = (num) => {
                 musicName.innerText = allMusic[num - 1].name; //뮤직 이름
@@ -210,8 +222,8 @@ function music() {
                                 do {
                                         randomIndex = Math.floor(
                                                 Math.random() *
-                                                        allMusic.length +
-                                                        1
+                                                allMusic.length +
+                                                1
                                         );
                                 } while (musicIndex == randomIndex);
 
@@ -254,16 +266,14 @@ function music() {
                 let li = `
         <li data-index="${i + 1}">
             <span class="img">
-                <img src="images/${allMusic[i].img}.png" alt=${
-                        allMusic[i].name
-                }>
+                <img src="images/${allMusic[i].img}.png" alt=${allMusic[i].name
+                        }>
             </span>
             <span class="title">
                 <strong>${allMusic[i].name}</strong><br>
                 <em>${allMusic[i].artist}</em>
-                <audio class="${allMusic[i].audio}" src="audio/${
-                        allMusic[i].audio
-                }.mp3"></audio>
+                <audio class="${allMusic[i].audio}" src="audio/${allMusic[i].audio
+                        }.mp3"></audio>
             </span>
             <span class="audio-duration" id="${allMusic[i].audio}">3:04</span>
         </li>

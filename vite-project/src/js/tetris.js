@@ -187,11 +187,32 @@ function tetris() {
                 //         ],
                 // ],
         };
+
         let score = 0;
         let totalScore = 0;
+        const tetrisOpen = document.querySelector(".icon2");
+        const tetrisClose = document.querySelector(".tetris__close");
+        const tetrisWrap = document.querySelector(".tetris__wrap");
         const scoreDisplay = document.getElementById("scoreDisplay");
         const totalScoreDisplay = document.getElementById("totalScoreDisplay");
+        const totalScore2Display = document.getElementById("totalScore2Display");
+        const restart = document.getElementById(".modal-content");
+        
 
+        tetrisOpen.addEventListener("click", () => {
+                tetrisWrap.style.display = "block";
+        });
+
+        tetrisClose.addEventListener("click", () => {
+                tetrisWrap.style.display = "none";
+                // tetrisMusic.pause();
+        });
+        document.querySelector(".tetris__start").addEventListener("click", () => {
+                document.querySelector(".tetris__card").style.display = "block";
+                document.querySelector(".tetris__intro").style.display = "none";
+                // tetrisMstop.style.display = "block";
+                init();
+              });
         let duration = 500;
         let downInterval;
         let tempMovingItem;
@@ -322,8 +343,9 @@ function tetris() {
                         scoreDisplay.innerText = "현재 점수는 " + score + " 점 입니다.";
                         totalScore += completedLineCount;
                         totalScoreDisplay.innerText = "총 점수는 " + totalScore + " 점 입니다.";
+                        totalScore2Display.innerText = "총 점수는 " + totalScore + " 점 입니다.";
 
-                        if (score >= 2) {
+                        if (score >= 5) {
                                 clearInterval(downInterval); // 게임 멈추기
                                 increaseLevel(); // 레벨 증가 함수 호출
                                 alert("레벨 업! 속도가 빨라집니다");
@@ -356,12 +378,13 @@ function tetris() {
                 const modal = document.getElementById("gameOverModal");
                 modal.style.display = "block";
         }
-
+        
         function closeModal() {
                 const modal = document.getElementById("gameOverModal");
                 modal.style.display = "none";
         }
-
+        
+        
         document.addEventListener("keydown", (e) => {
                 if (e.keyCode === 27) {
                         // ESC key
@@ -372,7 +395,6 @@ function tetris() {
         closeBtn.addEventListener("click", () => {
                 closeModal();
         });
-
 
 
 
@@ -443,6 +465,5 @@ function tetris() {
                                 break;
                 }
         });
-        init();
 }
 export default tetris;
