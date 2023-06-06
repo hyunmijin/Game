@@ -26,29 +26,32 @@
         border: 3px solid rgb(9, 114, 121);
         border-radius: 25px;
         animation: flicker 1.5s infinite alternate;
+
         .tetris__intro {
                 // display: none;
                 text-align: center;
                 color: #eee;
+
                 h2 {
                         margin-top: 80px;
                         font-size: 58px;
                         margin-bottom: 20px;
                 }
-                
+
                 li {
                         list-style: none;
                         line-height: 1.2;
                         font-size: 24px;
                         margin-bottom: 40px;
                 }
-                .tetris__start{
+
+                .tetris__start {
                         margin-top: 50px;
                         font-size: 40px;
                         margin-bottom: 200px;
                 }
         }
-        
+
 
 }
 
@@ -216,9 +219,10 @@
         // display: none;
         position: absolute;
 }
+
 .restart {
-  font-size: 48px;
-  margin-top: 24px;
+        font-size: 48px;
+        margin-top: 24px;
 }
 
 .tetris__close {
@@ -230,4 +234,23 @@
         color: white;
         font-size: 35px;
         z-index: 10000;
-      }
+}
+
+
+.tetris__music {
+        position: relative;
+        
+        .play {
+                position: absolute;
+                right: 19%;
+                bottom: 30px;
+                display: none;
+        }
+        .stop {
+                position: absolute;
+                right: 19%;
+                bottom: 30px;
+                display: none;
+        }
+}
+

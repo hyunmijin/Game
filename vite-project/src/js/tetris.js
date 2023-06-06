@@ -197,7 +197,9 @@ function tetris() {
         const totalScoreDisplay = document.getElementById("totalScoreDisplay");
         const totalScore2Display = document.getElementById("totalScore2Display");
         const restart = document.getElementById(".modal-content");
-        
+        const tetrisMplay = document.getElementById(".tetris__music .play");
+        const tetrisMstop = document.getElementById(".tetris__music .stop");
+
 
         tetrisOpen.addEventListener("click", () => {
                 tetrisWrap.style.display = "block";
@@ -212,7 +214,8 @@ function tetris() {
                 document.querySelector(".tetris__intro").style.display = "none";
                 // tetrisMstop.style.display = "block";
                 init();
-              });
+        });
+
         let duration = 500;
         let downInterval;
         let tempMovingItem;
@@ -378,13 +381,13 @@ function tetris() {
                 const modal = document.getElementById("gameOverModal");
                 modal.style.display = "block";
         }
-        
+
         function closeModal() {
                 const modal = document.getElementById("gameOverModal");
                 modal.style.display = "none";
         }
-        
-        
+
+
         document.addEventListener("keydown", (e) => {
                 if (e.keyCode === 27) {
                         // ESC key
